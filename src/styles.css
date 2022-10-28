@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./fonts/HussarBoldWeb-bf92.woff') format('woff2'),
+      url('./fonts/HussarBoldWeb-bf92.woff') format('woff');
+}
+
+* {
+    margin: 0;
+}
+/* Header Styling */
+
+#header {
+    background-color: #1a6aeb;
+    padding: 16px;
+}
+.headerTitle {
+    font-family: "MyFont";
+}
+
+/* styling for home tab */
+#content {
+    background: url("./images/burger.png");
+    background-repeat: no-repeat;
+    height: 880px;
+}
+
+.burgerPic {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
