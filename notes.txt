@@ -24,6 +24,7 @@ create webpack.config.js file, copy/paste code from https://webpack.js.org/guide
 then run npx webpack --config webpack.config.js
 ./src/index.js
 ./dist/index/html -->link main.js
+to import styles.css --> npm install --save-dev style-loader css-loader
 
 To test, put a console.log message inside of index.js and 
 check to see if content is displayed
