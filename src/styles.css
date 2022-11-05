@@ -7,27 +7,71 @@
 * {
     margin: 0;
 }
-/* Header Styling */
 
+/* Header Styling */
 #header {
-    background-color: #1a6aeb;
-    padding: 16px;
-}
-.headerTitle {
+    color:#57171c;
+    background-color: #cfcbbc;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap:30px;
     font-family: "MyFont";
+}
+
+.headerTitle {
+    font-size: 30px;
+}
+
+.home, .menu, .about {
+    color:#781720;
+    background-color: #b0ac9d;
+    border-radius: 20px;
+    width: 100px;
+    font-size: large;
 }
 
 /* styling for home tab */
 #content {
-    background: url("./images/burger.png");
+    background: url("./images/burger.jpg");
     background-repeat: no-repeat;
     height: 880px;
+    font-family: "MyFont";
 }
 
 .burgerPic {
     width: 100%;
     height: 100%;
+} 
+
+.squidPic {
+    position: absolute;
+    top:300px;
+    background-color: transparent;
+    height: 350px;
+    width: 350px;
 }
+
+.imageTxt {
+    display: flex;
+    position: relative;
+    top:45px;
+    left: 45px;
+    color: red;
+    font-size: 30px;
+}
+
+/* styling for menu tab */
+.menuContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item1 {
+    font-size: 200px;
+    color:green;
+}
+
 
 
 
