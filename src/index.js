@@ -1,10 +1,10 @@
+//  the "__Status" variables prevent the page from repeatedly placing the same tab over and over again on top of each other
 import './styles.css';
-import {homePage} from "./modules/home";
-import {menuPage} from "./modules/menu";
-import {aboutPage} from "./modules/about";
-import {removeHomePage} from "./modules/home";
+import {homePage, homeStatus, removeHomePage} from "./modules/home";
+import {menuPage, menuStatus, removeMenuPage} from "./modules/menu";
+import {aboutPage, aboutStatus, removeAboutPage} from "./modules/about";
 homePage();
-
+//creates buttons for each "tab" in the header (Home, Menu, About)
 const header = document.getElementById("header");
     const headerTitle = document.createElement('p');
     headerTitle.classList.add("headerTitle");
@@ -26,9 +26,35 @@ const header = document.getElementById("header");
     about.textContent = "About"
     header.appendChild(about);
 
-const homeBtn = document.querySelector(".home");     homeBtn.addEventListener('click', homePage);
-const menuBtn = document.querySelector(".menu");     menuBtn.addEventListener('click', menuPage);
-const aboutBtn = document.querySelector(".about");   aboutBtn.addEventListener('click', aboutPage);
+//will display current tab clicked and remove the other tabs
+const homeBtn = document.querySelector(".home");     
+    homeBtn.addEventListener('click', () => {
+        if(homeStatus)  return;
+        else {
+            homePage();
+            removeMenuPage();
+            removeAboutPage();
+        }
+    });
+
+const menuBtn = document.querySelector(".menu");     
+    menuBtn.addEventListener('click', () => {
+        if(menuStatus)  return;
+        else {
+            menuPage();
+            removeHomePage()
+            removeAboutPage();
+        }
+    });
+const aboutBtn = document.querySelector(".about");   
+    aboutBtn.addEventListener('click', () => {
+        if(aboutStatus) return;
+        else {
+            aboutPage();
+            removeHomePage();
+            removeMenuPage();
+        }
+    });
 
 
 

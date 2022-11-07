@@ -1,13 +1,18 @@
+import {aboutPage} from "./about";
+import {menuPage} from "./menu";
 import burgerIcon from "../images/burger.jpg";
 import squidPicture from "../images/squidwardstare.png";
-import { aboutPage } from "./about";
-import { menuPage } from "./menu";
+export let homeStatus = false;
+
+let content = document.getElementById("content"); 
+let imageTxt = document.createElement('p');
+let imageTxt2 = document.createElement('p');
+let squidPic;
+let burgerPic;
 export function homePage() {
-    console.log("home"); //delete when done
-    const content = document.getElementById("content"); 
-      
-        const imageTxt = document.createElement('p');
-        const imageTxt2 = document.createElement('p');
+    homeStatus = true;
+        imageTxt = document.createElement('p');
+        imageTxt2 = document.createElement('p');
         imageTxt.classList.add("imageTxt");
         imageTxt2.classList.add("imageTxt");
         imageTxt.textContent = "The Juiciest burgers a man has ever laid his God forbidden eyes on.";
@@ -15,19 +20,23 @@ export function homePage() {
         content.appendChild(imageTxt);
         content.appendChild(imageTxt2);
 
-        const squidPic = new Image();
+        squidPic = new Image();
         squidPic.src = squidPicture;
         squidPic.classList.add("squidPic");
         content.appendChild(squidPic);
 
-        const burgerPic = new Image();
+        burgerPic = new Image();
         burgerPic.src = burgerIcon;
         burgerPic.classList.add("burgerPic");
         content.appendChild(burgerPic);
+
+        return {content};
 }
 
 export function removeHomePage() {
-    console.log("did it work");
+    console.log("remove home"); // delete when done
+    content = menuPage();
+
 }
 
 

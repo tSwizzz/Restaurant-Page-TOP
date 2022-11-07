@@ -1,6 +1,10 @@
-import { homePage } from "./home";
-import { menuPage } from "./menu";
+export let aboutStatus = false;
+
 export function aboutPage() {
-    console.log("about"); //delete when done 
+    aboutStatus = true;
+}
+
+export function removeAboutPage() {
+    console.log("remove about"); //delete when done
 }
 
