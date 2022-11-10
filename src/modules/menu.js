@@ -18,6 +18,8 @@ export function menuPage() {
 
 export function removeMenuPage() {
     console.log('remove menu'); //delete when done
+    menuStatus = false;
+
 }
 
 

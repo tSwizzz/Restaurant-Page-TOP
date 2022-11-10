@@ -1,5 +1,3 @@
-import {aboutPage} from "./about";
-import {menuPage} from "./menu";
 import burgerIcon from "../images/burger.jpg";
 import squidPicture from "../images/squidwardstare.png";
 export let homeStatus = false;
@@ -29,14 +27,14 @@ export function homePage() {
         burgerPic.src = burgerIcon;
         burgerPic.classList.add("burgerPic");
         content.appendChild(burgerPic);
-
-        return {content};
 }
 
 export function removeHomePage() {
     console.log("remove home"); // delete when done
-    content = menuPage();
-
+    homeStatus = false;
+    while (content.firstChild) {
+        content.removeChild(content.firstChild);
+    }
 }
 
 

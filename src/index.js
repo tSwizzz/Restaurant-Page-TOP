@@ -4,6 +4,7 @@ import {homePage, homeStatus, removeHomePage} from "./modules/home";
 import {menuPage, menuStatus, removeMenuPage} from "./modules/menu";
 import {aboutPage, aboutStatus, removeAboutPage} from "./modules/about";
 homePage();
+
 //creates buttons for each "tab" in the header (Home, Menu, About)
 const header = document.getElementById("header");
     const headerTitle = document.createElement('p');
