@@ -7,7 +7,9 @@
 * {
     margin: 0;
 }
-
+body {
+    background-color: black;
+}
 /* Header Styling */
 #header {
     color:#57171c;
@@ -32,7 +34,7 @@
 }
 
 /* styling for home tab */
-#content {
+#homeContent {
     background: url("./images/burger.jpg");
     background-repeat: no-repeat;
     height: 880px;
@@ -55,23 +57,25 @@
 .imageTxt {
     display: flex;
     position: relative;
-    top:45px;
+    top:75px;
     left: 45px;
     color: red;
     font-size: 30px;
 }
 
 /* styling for menu tab */
-.menuContainer{
+#menuContent{
     display: grid;
     grid-template-rows: repeat(5, 10px);
     background-color: blue;
     justify-content: center;
     align-items: center;
-}
-.item1 {
-    font-size: 20px;
     color:green;
+}
+
+.word {
+    color:green;
+    font-size: 300px;
 }
 
 
