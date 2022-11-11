@@ -3,9 +3,8 @@ import './styles.css';
 import {homePage, homeStatus, removeHomePage} from "./modules/home";
 import {menuPage, menuStatus, removeMenuPage} from "./modules/menu";
 import {aboutPage, aboutStatus, removeAboutPage} from "./modules/about";
-homePage();
 
-//creates buttons for each "tab" in the header (Home, Menu, About)
+// **HEADER - creates buttons for each "tab" in the header (Home, Menu, About)
 const header = document.getElementById("header");
     const headerTitle = document.createElement('p');
     headerTitle.classList.add("headerTitle");
@@ -27,7 +26,7 @@ const header = document.getElementById("header");
     about.textContent = "About"
     header.appendChild(about);
 
-//will display current tab clicked and remove the other tabs
+// will display current tab clicked and remove the other tabs
 const homeBtn = document.querySelector(".home");     
     homeBtn.addEventListener('click', () => {
         if(homeStatus)  return;

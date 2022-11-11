@@ -1,25 +1,23 @@
 export let menuStatus = false;
 
+let menuContent = document.getElementById("content"); 
+let menuDiv = document.createElement('div');
+menuContent.appendChild(menuDiv);
+
+let word = document.createElement('p');
 export function menuPage() {
     menuStatus = true;
-    const content = document.getElementById("content"); 
-
-    const menuContainer = document.createElement('div');
-    menuContainer.classList.add("menuContainer");
-    content.appendChild(menuContainer);
-
-    for(let k = 0; k < 5; k++) {
-        const item1 = document.createElement('p');
-        item1.classList.add("item1");
-        item1.textContent = "wow";
-        menuContainer.appendChild(item1);
-    }
+    word.textContent = "test";
+    word.classList.add("word");
+    menuDiv.appendChild(word);
 }
 
 export function removeMenuPage() {
     console.log('remove menu'); //delete when done
     menuStatus = false;
-
+    while (menuDiv.firstChild) {
+        menuDiv.removeChild(menuDiv.firstChild);
+    }
 }
 
 
