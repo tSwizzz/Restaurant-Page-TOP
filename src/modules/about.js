@@ -5,8 +5,6 @@ export function aboutPage() {
 }
 
 export function removeAboutPage() {
-    console.log("remove about"); //delete when done
     aboutStatus = false;
-
 }
 

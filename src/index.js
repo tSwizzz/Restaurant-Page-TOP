@@ -4,11 +4,13 @@ import {homePage, homeStatus, removeHomePage} from "./modules/home";
 import {menuPage, menuStatus, removeMenuPage} from "./modules/menu";
 import {aboutPage, aboutStatus, removeAboutPage} from "./modules/about";
 
+homePage(); //start site at "home" tab
+
 // **HEADER - creates buttons for each "tab" in the header (Home, Menu, About)
 const header = document.getElementById("header");
     const headerTitle = document.createElement('p');
     headerTitle.classList.add("headerTitle");
-    headerTitle.textContent = "Ed's BITCHIN' Burgers";
+    headerTitle.textContent = "Ed's BITCH'N Burgers";
     header.appendChild(headerTitle);
 
     const home = document.createElement('button');

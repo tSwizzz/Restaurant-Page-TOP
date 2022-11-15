@@ -1,22 +1,31 @@
 export let menuStatus = false;
 
-let menuContent = document.getElementById("content"); 
-let menuDiv = document.createElement('div');
-menuContent.appendChild(menuDiv);
+const menuContent = document.getElementById("content");
+const menuContainer = document.createElement('div');
+menuContainer.classList.add("menuContainer");
+menuContent.appendChild(menuContainer);
 
-let word = document.createElement('p');
 export function menuPage() {
     menuStatus = true;
-    word.textContent = "test";
-    word.classList.add("word");
-    menuDiv.appendChild(word);
+        const menu1 = document.createElement('div');
+        menu1.classList.add('menu1');
+        menuContainer.appendChild(menu1);
+
+        const menu1Name = document.createElement('p');
+        menu1Name.classList.add("menu1Name");
+        menu1Name.textContent = "Old Fashioned: $8.95";
+        menu1.appendChild(menu1Name);
+
+        const menu1Info = document.createElement('p');
+        menu1Info.classList.add("menu1Info");
+        menu1Info.textContent = "Lettuce, Tomatoes, Cheese, Onions, Pickles, Mustard";
+        menu1.appendChild(menu1Info);
 }
 
 export function removeMenuPage() {
-    console.log('remove menu'); //delete when done
     menuStatus = false;
-    while (menuDiv.firstChild) {
-        menuDiv.removeChild(menuDiv.firstChild);
+    while (menuContainer.firstChild) {
+        menuContainer.removeChild(menuContainer.firstChild);
     }
 }
 
