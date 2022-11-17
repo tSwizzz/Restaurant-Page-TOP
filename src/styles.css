@@ -54,15 +54,17 @@ body {
 }
 
 /* styling for menu tab */
-
 .menuContainer {
     display: grid;
-    grid-template-rows: repeat(5, 300px); /* CONTINUE FROM HERE EDWARD :) */
+    grid-template-rows: repeat(2, 300px); /* CONTINUE FROM HERE EDWARD :) */
+    grid-template-columns: repeat(3, 1fr 1fr 1fr);
     gap: 40px;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .menu1 {
+    border-radius: 20px;
+    align-items: center;
     text-align: center;
     width: 200px;
     border: 2px solid brown;
@@ -74,6 +76,10 @@ body {
     color:red;
     font-size: 20px;
     font-weight: bold;
+}
+.menu1Info {
+    margin-top: 40px;
+    color:blue;
 }
 
 

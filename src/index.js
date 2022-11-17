@@ -1,7 +1,7 @@
 //  the "__Status" variables prevent the page from repeatedly placing the same tab over and over again on top of each other
 import './styles.css';
 import {homePage, homeStatus, removeHomePage} from "./modules/home";
-import {menuPage, menuStatus, removeMenuPage} from "./modules/menu";
+import {menuPage, generateMenu, menuStatus, removeMenuPage} from "./modules/menu";
 import {aboutPage, aboutStatus, removeAboutPage} from "./modules/about";
 
 homePage(); //start site at "home" tab
