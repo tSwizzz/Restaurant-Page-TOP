@@ -3,57 +3,44 @@ export let menuStatus = false;
 const menuContent = document.getElementById("content");
 const menuContainer = document.createElement('div');
 menuContainer.classList.add("menuContainer");
-menuContent.appendChild(menuContainer);
 
 
 const cardInfo = (title, description) => {
     return {title, description};
 };
-
 const cards = [
     cardInfo("Old Fashioned: $8.95", "Lettuce, Tomatoes, Cheese, Onions, Pickles, Mustard"),
     cardInfo("Sloppy Joe's: $7.95", "Tomatoes, Onions, Pickles, Mustard, Cheese, Chili"),
-    cardInfo("The Supreme: $10.95", "SourDough Bread, Lettuce, Tomatoes, Double Meat, Double Cheese, Onions, Pickles, Mustard" )
-]
+    cardInfo("The Supreme: $10.95", "SourDough Bread, Lettuce, Tomatoes, Double Meat, Double Cheese, Onions, Pickles, Mustard"),
+    cardInfo("The Bitch'n Ed: $12.95", "Triple Meat, Triple Cheese, Lettuce, Tomatoes, Cheese, Onions, Pickles, Mushrooms, BBQ Sauce, Mustard"),
+    cardInfo("The Kid Burger: $5.95", "Jr. Patty, Lettuce, Tomatoes, Cheese, Onions"),
+    cardInfo("Mozzarella Sticks: $3.95", "4 Piece Mozzarella Sticks with Marinara Dipping Sauce")
+];
 
 function generateMenu(mContainer) {
 
     cards.forEach ((card) => {
-        const menu1 = document.createElement('div');
-        const menu1Name = document.createElement('p');
-        const menu1Info = document.createElement('p');
+        const menuDiv = document.createElement('div');
+        const menuName = document.createElement('p');
+        const menuInfo = document.createElement('p');
 
-        menu1.classList.add('menu1');
-        menu1Name.classList.add("menu1Name");
-        menu1Info.classList.add("menu1Info");
+        menuDiv.classList.add('menuDiv');
+        menuName.classList.add("menuName");
+        menuInfo.classList.add("menuInfo");
 
-        menu1Name.innerText = card.title;
-        menu1Info.innerText = card.description;
+        menuName.innerText = card.title;
+        menuInfo.innerText = card.description;
 
-        menu1.append(menu1Name, menu1Info);
-        mContainer.appendChild(menu1);
+        menuDiv.append(menuName, menuInfo);
+        mContainer.appendChild(menuDiv);
     });
 }
 
 
 export function menuPage() {
     menuStatus = true;
+    menuContent.appendChild(menuContainer);
     generateMenu(menuContainer);
-
-        const menu1 = document.createElement('div');
-        menu1.classList.add('menu1');
-        menuContainer.appendChild(menu1);
-
-        const menu1Name = document.createElement('p');
-        menu1Name.classList.add("menu1Name");
-        menu1Name.textContent = "Old Fashioned: $8.95";
-        menu1.appendChild(menu1Name);
-
-        const menu1Info = document.createElement('p');
-        menu1Info.classList.add("menu1Info");
-        menu1Info.textContent = "Lettuce, Tomatoes, Cheese, Onions, Pickles, Mustard";
-        menu1.appendChild(menu1Info);
-
 }
 
 export function removeMenuPage() {
