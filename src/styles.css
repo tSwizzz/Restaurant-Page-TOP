@@ -107,6 +107,8 @@ body {
     padding: 50px;
     justify-content: center;
     gap:80px;
+    background-image: url('./images/phoneguy.jpg');
+    height: 700px;
 }
 
 .aboutDiv {
@@ -119,7 +121,7 @@ body {
     border-top: 6px solid brown;
     border-right: 6px solid brown;
     background-color: #c9af98;
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 .aboutInfo {
@@ -128,6 +130,10 @@ body {
     font-weight: bold;
 }
 
+.phonePic {
+    height: 300px;
+    margin-left: 20px;    
+}
 
 
 
