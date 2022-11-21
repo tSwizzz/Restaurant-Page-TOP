@@ -1,4 +1,3 @@
-//  the "__Status" variables prevent the page from repeatedly placing the same tab over and over again on top of each other
 import './styles.css';
 import {homePage, homeStatus, removeHomePage} from "./modules/home";
 import {menuPage, menuStatus, removeMenuPage} from "./modules/menu";
@@ -31,7 +30,7 @@ const header = document.getElementById("header");
 // will display current tab clicked and remove the other tabs
 const homeBtn = document.querySelector(".home");     
     homeBtn.addEventListener('click', () => {
-        if(homeStatus)  return;
+        if(homeStatus)  return; //this line checks to see if the current tab is already displayed to prevent the page from repeating its content when clicked multiple times
         else {
             homePage();
             if(menuStatus == true)

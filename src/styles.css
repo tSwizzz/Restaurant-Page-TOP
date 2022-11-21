@@ -32,6 +32,12 @@ body {
     border-radius: 20px;
     width: 100px;
     font-size: large;
+    opacity: 0.8;
+}
+
+.home:hover, .menu:hover, .about:hover {
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 /* styling for home tab */
@@ -96,10 +102,32 @@ body {
 
 /* styling for about tab */
 .aboutContainer {
-    display: flex;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /* CONTINUE FROM HERE EDWARD :) */
+    padding: 50px;
     justify-content: center;
-    color:red;
+    gap:80px;
 }
+
+.aboutDiv {
+    padding: 20px;
+    border-radius: 30px;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    border: 2px solid brown;
+    border-top: 6px solid brown;
+    border-right: 6px solid brown;
+    background-color: #c9af98;
+    opacity: 0.5;
+}
+
+.aboutInfo {
+    color:darkred;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 
 
 
