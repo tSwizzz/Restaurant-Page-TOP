@@ -96,8 +96,9 @@ body {
 
 /* styling for about tab */
 .aboutContainer {
-    display: grid;
+    display: flex;
     justify-content: center;
+    color:red;
 }
 
 

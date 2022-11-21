@@ -1,3 +1,6 @@
+import { aboutStatus } from "./about";
+import { homeStatus } from "./home";
+
 export let menuStatus = false;
 
 const menuContent = document.getElementById("content");
@@ -48,6 +51,7 @@ export function removeMenuPage() {
     while (menuContainer.firstChild) {
         menuContainer.removeChild(menuContainer.firstChild);
     }
+        menuContent.removeChild(menuContainer)
 }
 
 

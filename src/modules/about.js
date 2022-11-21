@@ -6,9 +6,9 @@ aboutContainer.classList.add("aboutContainer");
 
 
 export function aboutPage() {
-    aboutStatus = true;
-    aboutContainer.textContent = "wow";
+    aboutContainer.textContent = "i think im almost done with this project lol";
     aboutContent.appendChild(aboutContainer);
+
 
 }
 
