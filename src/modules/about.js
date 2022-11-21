@@ -1,3 +1,4 @@
+import phoneIcon from "../images/phoneguy.jpg";
 export let aboutStatus = false;
 
 const aboutContent = document.getElementById("content");
@@ -25,6 +26,10 @@ export function aboutPage() {
     aboutDiv2.appendChild(aboutInfo2);
 
     aboutContainer.append(aboutDiv1, aboutDiv2);
+
+    const phonePic = new Image();
+    phonePic.src = phoneIcon;
+    phonePic.classList.add("phonePic");
 }
 
 export function removeAboutPage() {
