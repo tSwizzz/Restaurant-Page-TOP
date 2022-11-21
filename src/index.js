@@ -34,8 +34,10 @@ const homeBtn = document.querySelector(".home");
         if(homeStatus)  return;
         else {
             homePage();
-            removeMenuPage();
-            removeAboutPage();
+            if(menuStatus == true)
+                removeMenuPage();
+            else
+                removeAboutPage();
         }
     });
 
@@ -44,8 +46,10 @@ const menuBtn = document.querySelector(".menu");
         if(menuStatus)  return;
         else {
             menuPage();
-            removeHomePage()
-            removeAboutPage();
+            if(homeStatus)
+                removeHomePage();
+            else
+                removeAboutPage();
         }
     });
 const aboutBtn = document.querySelector(".about");   
@@ -53,8 +57,10 @@ const aboutBtn = document.querySelector(".about");
         if(aboutStatus) return;
         else {
             aboutPage();
-            removeHomePage();
-            removeMenuPage();
+            if(homeStatus)
+                removeHomePage();
+            else 
+                removeMenuPage();
         }
     });
 

@@ -1,13 +1,10 @@
-import { aboutStatus } from "./about";
-import { homeStatus } from "./home";
-
 export let menuStatus = false;
 
 const menuContent = document.getElementById("content");
 const menuContainer = document.createElement('div');
 menuContainer.classList.add("menuContainer");
 
-
+// all the info for the menu items
 const cardInfo = (title, description) => {
     return {title, description};
 };
@@ -20,8 +17,10 @@ const cards = [
     cardInfo("Mozzarella Sticks: $3.95", "4 Piece Mozzarella Sticks with Marinara Dipping Sauce")
 ];
 
-function generateMenu(mContainer) {
-
+//displays all the items on the menu
+export function menuPage() {
+    menuStatus = true;
+    menuContent.appendChild(menuContainer);
     cards.forEach ((card) => {
         const menuDiv = document.createElement('div');
         const menuName = document.createElement('p');
@@ -35,15 +34,8 @@ function generateMenu(mContainer) {
         menuInfo.innerText = card.description;
 
         menuDiv.append(menuName, menuInfo);
-        mContainer.appendChild(menuDiv);
+        menuContainer.appendChild(menuDiv);
     });
-}
-
-
-export function menuPage() {
-    menuStatus = true;
-    menuContent.appendChild(menuContainer);
-    generateMenu(menuContainer);
 }
 
 export function removeMenuPage() {

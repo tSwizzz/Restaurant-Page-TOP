@@ -14,8 +14,10 @@ export function aboutPage() {
 
 export function removeAboutPage() {
     aboutStatus = false;
+    console.log("wow");
     while (aboutContainer.firstChild) {
         aboutContainer.removeChild(aboutContainer.firstChild);
     }
+    
 }
 

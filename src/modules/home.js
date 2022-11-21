@@ -3,12 +3,12 @@ import squidPicture from "../images/squidwardstare.png";
 export let homeStatus = false;
 const homeContent = document.getElementById("content"); 
 const homeDiv = document.createElement('div');
-homeContent.appendChild(homeDiv);
 
 export function homePage() {
 
     homeStatus = true;
-    
+    homeContent.appendChild(homeDiv);
+
     const imageTxt = document.createElement('p');
     const imageTxt2 = document.createElement('p');
     imageTxt.classList.add("imageTxt");
