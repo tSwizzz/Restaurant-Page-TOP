@@ -8,26 +8,28 @@ creates a node_modules folder.
 Put that node_modules folder into .gitignore --> touch .gitignore 
 and then inside that file put node_modules/*
 
-Create webpack.config.js file and copy paste the code from that 
-one website, then npx webpack --config webpack.config.js
+Create webpack.config.js file and copy paste the code  https://webpack.js.org/guides/getting-started/#using-a-configuration
+
+Then add mode: 'development' at end of module.exports
 
 Make src and dist folders --> ./src/index.js
                               ./dist/index.html
 
-Link the main.js file in index.html
+Link the main.js file in index.html, then npx webpack --config webpack.config.js
+
+Then npx webpack --watch
+
+to import styles.css --> npm install --save-dev style-loader css-loader
 
 
 *shortened how-to*
 npm init -y
 npm install webpack webpack-cli --save-dev
 create webpack.config.js file, copy/paste code from https://webpack.js.org/guides/getting-started/#using-a-configuration
-then run npx webpack --config webpack.config.js
-./src/index.js
-./dist/index/html -->link main.js
-to import styles.css --> npm install --save-dev style-loader css-loader
+Add mode: 'development' at end
+Make src and dust folders with index.js and index.html respectively, and link the ./main.js file
+npx web pack --watch
 
-To test, put a console.log message inside of index.js and 
-check to see if content is displayed
 
 
 
